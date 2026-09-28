@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@source "../*.html";
+@source "../assets/js";
+@source "../schemes";
+@source "../scripts";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #f6f1fe;
+  --color-brand-100: #ece2fd;
+  --color-brand-200: #d9c6fb;
+  --color-brand-300: #bd9cf7;
+  --color-brand-400: #9d6bf0;
+  --color-brand-500: #8043e6;
+  --color-brand-600: #6d2ed2;
+  --color-brand-700: #5b21b6;
+  --color-brand-800: #4b1c93;
+  --color-brand-900: #3a1673;
+  --color-brand-950: #1f0a45;
+
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffecd4;
+  --color-accent-200: #ffd5a8;
+  --color-accent-300: #ffb670;
+  --color-accent-400: #fd9a3e;
+  --color-accent-500: #f7861e;
+  --color-accent-600: #e46a0b;
+  --color-accent-700: #bd500c;
+
+  --color-ink: #16112b;
+
+  --shadow-card: 0 1px 2px rgb(22 17 43 / 0.04), 0 8px 24px -12px rgb(22 17 43 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(22 17 43 / 0.04), 0 20px 40px -20px rgb(22 17 43 / 0.22);
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-600 antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility section {
+  @apply py-20 lg:py-28;
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-3 text-xs font-bold tracking-[0.18em] text-accent-600 uppercase before:h-0.5 before:w-8 before:bg-accent-500 before:content-[''];
+}
+
+@utility eyebrow-dark {
+  @apply inline-flex items-center gap-3 text-xs font-bold tracking-[0.18em] text-accent-400 uppercase before:h-0.5 before:w-8 before:bg-accent-500 before:content-[''];
+}
+
+@utility heading-xl {
+  @apply font-display text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl lg:text-[3.5rem];
+}
+
+@utility heading-lg {
+  @apply font-display text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-[2.75rem];
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@utility btn-primary {
+  @apply btn bg-accent-500 text-white shadow-sm hover:bg-accent-600 focus-visible:outline-accent-500;
+}
+
+@utility btn-brand {
+  @apply btn bg-brand-700 text-white shadow-sm hover:bg-brand-800 focus-visible:outline-brand-700;
+}
+
+@utility btn-outline {
+  @apply btn border border-slate-200 bg-white text-ink hover:border-brand-300 hover:text-brand-700;
+}
+
+@utility btn-ghost-light {
+  @apply btn border border-white/30 text-white hover:border-white hover:bg-white hover:text-brand-900;
+}
+
+@utility card {
+  @apply rounded-xl border border-slate-200 bg-white shadow-card;
+}
+
+@utility card-hover {
+  @apply card transition duration-300 hover:border-brand-300 hover:shadow-lift;
+}
+
+@utility icon-tile {
+  @apply grid size-12 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-700;
+}
+
+@utility field-label {
+  @apply mb-1.5 block text-xs font-semibold tracking-wide text-slate-700 uppercase;
+}
+
+@utility field {
+  @apply w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-ink placeholder:text-slate-400 transition outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15;
+}
+
+@utility field-error {
+  @apply mt-1 hidden text-xs font-medium text-red-600;
+}
+
+@utility nav-link {
+  @apply inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-700;
+
+  &[aria-current="page"] {
+    @apply bg-brand-50 text-brand-700;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
+}

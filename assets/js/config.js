@@ -1,0 +1,78 @@
+window.VERTEX_CONFIG = {
+  SITE_NAME: "Vertex Certification",
+  SITE_TAGLINE: "Trust Today, Trust Tomorrow",
+  PHONE_DISPLAY: "+91 98980 85170",
+  PHONE_HREF: "tel:+919898085170",
+  EMAIL: "contact@vertex-certification.com",
+  ADDRESS_LINES: ["A-302, Iscon Center, Nr. Shivranjani Char Rasta,", "Satellite, Ahmedabad, Gujarat"],
+  MAP_URL: "https://maps.google.com/?q=Iscon+Center+Shivranjani+Char+Rasta+Satellite+Ahmedabad",
+  WORKING_HOURS: "Mon - Sat, 10:00 AM - 7:00 PM",
+  WHATSAPP_NUMBER: "919898085170",
+  WHATSAPP_GREETING: "Hi Vertex Certification, I'm interested in your services. Can we talk?",
+
+  LOGO: { src: "assets/img/logo.webp", width: 737, height: 192 },
+  LOGO_LIGHT: { src: "assets/img/logo-light.webp", width: 737, height: 192 },
+
+  // Set to a form backend URL (Formspree, Web3Forms, own API) to POST enquiries as JSON.
+  // When empty, enquiries open a prefilled WhatsApp chat instead.
+  FORM_ENDPOINT: "",
+
+  SOCIAL_LINKS: [
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/" },
+    { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/" },
+    { label: "Facebook", icon: "facebook", href: "https://www.facebook.com/" },
+    { label: "YouTube", icon: "youtube", href: "https://www.youtube.com/" },
+  ],
+
+  NAV_LINKS: [
+    { label: "Home", href: "index.html", page: "home" },
+    { label: "Services", href: "services.html", page: "services", menu: "services" },
+    { label: "Schemes", href: "schemes.html", page: "schemes", menu: "schemes" },
+    { label: "About Us", href: "about.html", page: "about" },
+    { label: "Why Us", href: "about.html#why-us", page: "why" },
+    { label: "Insights", href: "index.html#insights", page: "insights" },
+    { label: "Careers", href: "careers.html", page: "careers" },
+    { label: "Contact", href: "contact.html", page: "contact" },
+  ],
+
+  SERVICES: [
+    { slug: "management-consulting", title: "Management Consulting", icon: "briefcase-business", summary: "Strategy, operations and governance for measurable growth" },
+    { slug: "certification-compliance", title: "Certification & Compliance", icon: "shield-check", summary: "ISO, regulatory and quality management, done right" },
+    { slug: "recruitment-staffing", title: "Recruitment & Staffing", icon: "users-round", summary: "From CXO search to large-scale workforce deployment" },
+    { slug: "training-skill-development", title: "Training & Skill Development", icon: "graduation-cap", summary: "Leadership, technical and behavioural training that sticks" },
+    { slug: "project-management", title: "Project Management Services", icon: "clipboard-list", summary: "Independent PMO support for complex programs" },
+    { slug: "business-support", title: "Business Support Services", icon: "headset", summary: "Reliable back-office, admin and operations support" },
+    { slug: "funding-financial-services", title: "Funding & Financial Services", icon: "landmark", summary: "Startup recognition, MSME, grants and business financing" },
+  ],
+
+  SCHEMES: [
+    { slug: "pmegp", title: "PMEGP", icon: "factory", summary: "Credit-linked subsidy for new micro enterprises" },
+    { slug: "clcss", title: "CLCSS", icon: "cog", summary: "15% capital subsidy for technology upgradation" },
+    { slug: "msme-champions", title: "MSME Champions", icon: "trophy", summary: "Sustainable, competitive and innovative MSMEs" },
+    { slug: "cgtmse", title: "CGTMSE", icon: "shield", summary: "Collateral-free loans up to ₹10 Crore" },
+    { slug: "pmfme", title: "PMFME", icon: "utensils", summary: "Credit-linked subsidy for food processing units" },
+    { slug: "tufs", title: "TUFS", icon: "scissors", summary: "Modernisation support for the textile sector" },
+    { slug: "mudra-loan", title: "Mudra Loan", icon: "wallet", summary: "Collateral-free business loans up to ₹20 Lakh" },
+    { slug: "zed-certification", title: "ZED Certification", icon: "badge-check", summary: "Quality certification for MSMEs" },
+    { slug: "fund-of-funds", title: "Fund of Funds", icon: "building-2", summary: "₹10,000 Cr corpus catalysing startup funding" },
+    { slug: "startup-india", title: "Startup India Scheme", icon: "rocket", summary: "Recognition, tax breaks and self-certification" },
+    { slug: "nsic-schemes", title: "NSIC Schemes", icon: "store", summary: "Marketing, credit and technology support" },
+    { slug: "stand-up-india", title: "Stand-Up India", icon: "user-round-check", summary: "Loans for SC/ST and women entrepreneurs" },
+    { slug: "cgssd", title: "CGSSD", icon: "life-buoy", summary: "Subordinate debt support for stressed MSMEs" },
+    { slug: "cgss", title: "CGSS", icon: "lightbulb", summary: "Collateral-free debt for DPIIT startups" },
+    { slug: "pm-svanidhi", title: "PM SVANidhi", icon: "shopping-cart", summary: "Micro-credit for street vendors" },
+  ],
+
+  UPDATES: [
+    "Government Grants & Subsidies",
+    "Business Loan Services",
+    "NBFC Financing Solutions",
+    "MUDRA Loan 2026",
+    "PMEGP Subsidy",
+    "CGTMSE Collateral-Free Loans",
+    "Startup India DPIIT Recognition",
+    "MSME / Udyam Registration",
+    "ISO 9001 : 2015 Certification",
+    "ZED Certification Subsidy",
+  ],
+};

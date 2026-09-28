@@ -1,0 +1,17 @@
+{
+  "name": "vertex-certification",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vertex Certification marketing website - static HTML, Tailwind CSS and vanilla JS",
+  "scripts": {
+    "dev": "tailwindcss -i ./styles/tailwind.css -o ./assets/css/styles.css --watch=always",
+    "build": "node scripts/build-schemes.mjs && tailwindcss -i ./styles/tailwind.css -o ./assets/css/styles.css --minify && rm -rf dist && mkdir -p dist && cp -R *.html assets schemes dist/",
+    "start": "serve . -l 3100",
+    "pages": "node scripts/build-schemes.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "serve": "14.2.6",
+    "tailwindcss": "4.3.3"
+  }
+}

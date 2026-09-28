@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Vertex Certification</title>
+  <meta name="description" content="Talk to a Vertex Certification consultant about ISO certification, government schemes, funding or hiring. Call +91 98980 85170 or send an enquiry." />
+  <meta name="theme-color" content="#3a1673" />
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@1.47.0/dist/umd/lucide.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="bg-brand-950 pb-40 text-white">
+      <div class="container-x pt-16 lg:pt-24">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-brand-200/80"><a href="index.html" class="hover:text-white">Home</a><i data-lucide="chevron-right" class="size-4"></i><span class="text-white">Contact</span></nav>
+        <h1 class="heading-xl mt-6 max-w-3xl text-white">Let's talk about <span class="text-accent-400">your goals</span></h1>
+        <p class="mt-6 max-w-2xl text-lg text-brand-100/85">Speak with a Vertex consultant about certification, funding schemes or hiring. Our experts respond within 24 hours.</p>
+      </div>
+    </section>
+
+    <section class="container-x -mt-28 pb-20 lg:pb-28">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <form id="enquiry" data-enquiry-form data-form-name="Contact page" novalidate class="card p-6 sm:p-10 lg:col-span-7">
+          <h2 class="text-2xl font-bold">Send us an enquiry</h2>
+          <p class="mt-1 text-sm text-slate-500">Fields marked * are required.</p>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="c-name" class="field-label">Full name *</label>
+              <input id="c-name" name="Name" type="text" required autocomplete="name" class="field" placeholder="Your name" />
+              <p class="field-error"></p>
+            </div>
+            <div>
+              <label for="c-company" class="field-label">Company name *</label>
+              <input id="c-company" name="Company" type="text" required autocomplete="organization" class="field" placeholder="Company Pvt. Ltd." />
+              <p class="field-error"></p>
+            </div>
+            <div>
+              <label for="c-email" class="field-label">Email address *</label>
+              <input id="c-email" name="Email" type="email" required autocomplete="email" class="field" placeholder="you@company.com" />
+              <p class="field-error"></p>
+            </div>
+            <div>
+              <label for="c-phone" class="field-label">Contact number *</label>
+              <input id="c-phone" name="Phone" type="tel" required autocomplete="tel" inputmode="tel" class="field" placeholder="98765 43210" />
+              <p class="field-error"></p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="c-service" class="field-label">Service type *</label>
+              <select id="c-service" name="Service" required class="field">
+                <option value="">Select a service</option>
+                <option>ISO Certification &amp; Compliance</option>
+                <option>Government Schemes &amp; Funding</option>
+                <option>Startup India / MSME Registration</option>
+                <option>Management Consulting</option>
+                <option>Recruitment &amp; Staffing</option>
+                <option>Training &amp; Skill Development</option>
+                <option>Project Management</option>
+                <option>Business Support</option>
+                <option>Other</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="c-message" class="field-label">Message</label>
+              <textarea id="c-message" name="Message" rows="5" class="field resize-y" placeholder="Tell us briefly about your requirement"></textarea>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="flex items-center gap-1.5 text-xs text-slate-500"><i data-lucide="lock" class="size-3.5"></i>We never share your details.</p>
+            <button type="submit" class="btn-primary px-8">Submit enquiry <i data-lucide="send" class="size-4"></i></button>
+          </div>
+          <p data-form-status class="mt-5 hidden" role="status"></p>
+        </form>
+
+        <aside class="space-y-6 lg:col-span-5">
+          <div class="card p-6 sm:p-8">
+            <h2 class="text-xl font-bold">Get in touch</h2>
+            <ul class="mt-6 divide-y divide-slate-100">
+              <li class="flex gap-4 pb-5"><span class="icon-tile"><i data-lucide="phone" class="size-5"></i></span><div><p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">Call us</p><a href="tel:+919898085170" data-bind-href="PHONE_HREF" data-bind="PHONE_DISPLAY" class="mt-1 block font-semibold text-ink hover:text-brand-700">+91 98980 85170</a></div></li>
+              <li class="flex gap-4 py-5"><span class="icon-tile"><i data-lucide="mail" class="size-5"></i></span><div class="min-w-0"><p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">Email</p><a href="mailto:contact@vertex-certification.com" data-bind-href="EMAIL|mailto:" data-bind="EMAIL" class="mt-1 block font-semibold break-all text-ink hover:text-brand-700">contact@vertex-certification.com</a></div></li>
+              <li class="flex gap-4 py-5"><span class="icon-tile"><i data-lucide="map-pin" class="size-5"></i></span><div><p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">Office</p><p class="mt-1 font-semibold text-ink">A-302, Iscon Center, Nr. Shivranjani Char Rasta, Satellite, Ahmedabad, Gujarat</p></div></li>
+              <li class="flex gap-4 pt-5"><span class="icon-tile"><i data-lucide="clock" class="size-5"></i></span><div><p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">Working hours</p><p class="mt-1 font-semibold text-ink" data-bind="WORKING_HOURS">Mon - Sat, 10:00 AM - 7:00 PM</p></div></li>
+            </ul>
+            <a href="https://wa.me/919898085170" data-bind-href="WHATSAPP_NUMBER|https://wa.me/" target="_blank" rel="noopener" class="btn mt-6 w-full bg-[#25D366] text-white hover:bg-[#1ebe5b]"><i data-lucide="message-circle" class="size-4"></i>Chat on WhatsApp</a>
+          </div>
+          <div class="card overflow-hidden">
+            <iframe title="Vertex Certification office location" src="https://www.google.com/maps?q=Iscon+Center+Shivranjani+Char+Rasta+Satellite+Ahmedabad&amp;output=embed" class="h-64 w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
