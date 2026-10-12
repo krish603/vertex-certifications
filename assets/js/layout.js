@@ -120,7 +120,7 @@
               <p class="text-xs font-bold tracking-[0.16em] text-accent-600 uppercase">${isServices ? "Our services" : "Government schemes"}</p>
               <a href="${page}" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:text-accent-600">View all <i data-lucide="arrow-right" class="size-3.5"></i></a>
             </div>
-            <div class="grid grid-cols-3 gap-1">${items}</div>
+            <div class="grid ${isServices ? "grid-cols-3" : "grid-cols-4"} gap-1">${items}</div>
           </div>
           ${aside}
         </div>

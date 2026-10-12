@@ -5,6 +5,8 @@ const HELP_STEPS = [
   { title: "Sanction & follow-up", text: "We follow up until sanction, disbursement and any subsidy release." },
 ];
 
+const FLYER_DIR = "../assets/img/schemes";
+
 const BUSINESS_TYPES = ["Proprietorship", "Partnership / LLP", "Private Limited", "Startup (DPIIT)", "SHG / FPO / Cooperative", "Not registered yet"];
 
 function esc(value) {
@@ -32,6 +34,29 @@ function faqBlock(faqs) {
               </div>`
     )
     .join("\n              ");
+}
+
+function flyerCard(scheme) {
+  if (!scheme.flyer) return "";
+  const title = esc(scheme.title);
+  const image = `${FLYER_DIR}/${scheme.slug}-flyer.webp`;
+  const download = `${FLYER_DIR}/${scheme.slug}-flyer.jpg`;
+  const link = "inline-flex items-center gap-1.5 text-brand-700 hover:text-accent-600";
+  return `
+        <div class="card mb-5 flex gap-5 p-5">
+            <a href="${download}" target="_blank" rel="noopener" class="block w-28 shrink-0 overflow-hidden rounded-lg ring-1 ring-slate-200" aria-label="View the ${title} flyer">
+              <img src="${image}" alt="${title} flyer" width="${scheme.flyer.width}" height="${scheme.flyer.height}" loading="lazy" class="h-auto w-full" />
+            </a>
+            <div class="min-w-0">
+              <p class="text-xs font-bold tracking-[0.16em] text-accent-600 uppercase">Scheme flyer</p>
+              <p class="mt-1.5 text-sm leading-relaxed">One-page summary of ${title} to save or forward.</p>
+              <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm font-semibold">
+                <a href="${download}" target="_blank" rel="noopener" class="${link}"><i data-lucide="eye" class="size-4"></i>View</a>
+                <a href="${download}" download="${scheme.slug}-flyer.jpg" class="${link}"><i data-lucide="download" class="size-4"></i>Download</a>
+                <a href="https://wa.me/" data-share-whatsapp="${title} flyer from Vertex Certification" target="_blank" rel="noopener" class="${link}"><i data-lucide="message-circle" class="size-4"></i>Share</a>
+              </div>
+            </div>
+          </div>`;
 }
 
 function relatedCards(related, bySlug) {
@@ -152,7 +177,7 @@ export function renderSchemePage(scheme, bySlug) {
         <p class="flex gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500"><i data-lucide="info" class="size-4 shrink-0"></i>Scheme limits, subsidy rates and timelines are indicative and subject to the latest government guidelines and lender policies. Vertex Certification is a private consultancy and is not affiliated with any government body.</p>
       </div>
 
-      <aside class="lg:col-span-4">
+      <aside class="lg:col-span-4">${flyerCard(scheme)}
         <div class="space-y-5 lg:sticky lg:top-28">
           <form id="enquire" data-enquiry-form data-form-name="Scheme page" data-intro="Hi Vertex Certification, I'd like to check my eligibility for ${title}." novalidate class="card p-6 sm:p-7">
             <p class="text-xs font-bold tracking-[0.16em] text-accent-600 uppercase">Free eligibility check</p>

@@ -61,6 +61,13 @@ window.VERTEX_CONFIG = {
     { slug: "cgssd", title: "CGSSD", icon: "life-buoy", summary: "Subordinate debt support for stressed MSMEs" },
     { slug: "cgss", title: "CGSS", icon: "lightbulb", summary: "Collateral-free debt for DPIIT startups" },
     { slug: "pm-svanidhi", title: "PM SVANidhi", icon: "shopping-cart", summary: "Micro-credit for street vendors" },
+    { slug: "msme-design", title: "MSME Design Scheme", icon: "pen-tool", summary: "Up to ₹40 Lakh grant for product design projects" },
+    { slug: "textile-grant", title: "Textile Grant", icon: "shirt", summary: "Up to ₹50 Lakh for textile units" },
+    { slug: "agri-infra-fund", title: "NAIFF Loan Scheme", icon: "warehouse", summary: "Agri infra loans up to ₹2 Cr with 3% subvention" },
+    { slug: "velocity-fund", title: "Velocity Fund", icon: "atom", summary: "Up to ₹9 Cr seed funding for deep tech startups" },
+    { slug: "tide-2", title: "TIDE 2.0 Grant", icon: "flask-conical", summary: "Up to ₹7 Lakh grant for tech innovators" },
+    { slug: "seed-support-scheme", title: "Seed Support Scheme", icon: "sprout", summary: "₹25 Lakh to ₹1 Cr for early-stage startups" },
+    { slug: "rkvy-raftaar", title: "RKVY RAFTAAR", icon: "tractor", summary: "Up to ₹25 Lakh for agri-startups" },
   ],
 
   UPDATES: [
@@ -74,5 +81,9 @@ window.VERTEX_CONFIG = {
     "MSME / Udyam Registration",
     "ISO 9001 : 2015 Certification",
     "ZED Certification Subsidy",
+    "MSME Design Grant up to ₹40 Lakh",
+    "RKVY RAFTAAR for Agri-Startups",
+    "Textile Grant up to ₹50 Lakh",
+    "TIDE 2.0 Startup Grant",
   ],
 };

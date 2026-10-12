@@ -316,6 +316,14 @@
     });
   }
 
+  // Share links open WhatsApp with the label and the current page URL prefilled
+  function initShareLinks() {
+    document.querySelectorAll("[data-share-whatsapp]").forEach((el) => {
+      const text = `${el.dataset.shareWhatsapp}: ${location.href.split("#")[0]}`;
+      el.setAttribute("href", `https://wa.me/?text=${encodeURIComponent(text)}`);
+    });
+  }
+
   function initYear() {
     document.querySelectorAll("[data-year]").forEach((el) => {
       el.textContent = String(new Date().getFullYear());
@@ -333,5 +341,6 @@
   initFilters();
   initForms();
   initConfigBindings();
+  initShareLinks();
   initYear();
 })();
