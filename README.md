@@ -26,6 +26,7 @@ assets/js/config.js      Single source for phone, email, address, WhatsApp, nav,
 assets/js/layout.js      Renders the top bar, header + mega menus, mobile drawer, footer and floating actions
 assets/js/main.js        Interactions: menus, scroll reveal, counters, FAQ, scheme filters, form validation
 assets/img/              Logo (logo.webp, logo-light.webp for dark backgrounds, logo-mark.webp), favicons and photos
+assets/docs/             Downloadable documents (company ISO 9001:2015 certificate)
 ```
 
 Header and footer are injected by `layout.js` into `<div id="site-header">` and `<div id="site-footer">`,
