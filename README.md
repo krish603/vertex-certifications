@@ -10,8 +10,28 @@ pnpm dev     # Tailwind watcher, rebuilds assets/css/styles.css on change
 pnpm start   # static server on http://localhost:3100
 ```
 
-Before deploying, run `pnpm build` to produce a minified `assets/css/styles.css`.
-The site is plain static files, so it can go on any host (Cloudflare Pages, Netlify, Vercel, cPanel).
+| Command       | What it does                                                        |
+| ------------- | ------------------------------------------------------------------- |
+| `pnpm build`  | Regenerate scheme pages, minify CSS, copy the site into `dist/`      |
+| `pnpm bundle` | Build, then zip `dist/` into `vertex-site.zip` for upload            |
+
+## Deploying to GoDaddy
+
+The site is built **locally** and uploaded as plain files to GoDaddy cPanel hosting. GoDaddy never runs a
+build or a Node process for this project, so do not set it up as a Node.js app.
+
+```bash
+pnpm bundle
+```
+
+That writes the site to `dist/` (including `.htaccess`) and zips it into `vertex-site.zip`. In cPanel's
+File Manager, open `public_html/`, delete GoDaddy's default placeholder files, upload the zip, extract it
+there, then delete the zip. Extracting must leave `index.html` directly inside `public_html/`, not inside a
+nested folder. To update the site, re-run `pnpm bundle` and upload and extract again, overwriting the old files.
+
+`.htaccess` forces https, serves clean urls (`/about` loads `about.html`) and sets compression and caching.
+Run AutoSSL from cPanel's SSL/TLS Status page before going live, or the https redirect lands on an
+invalid certificate.
 
 ## Structure
 

@@ -5,7 +5,8 @@
   "description": "Vertex Certification marketing website - static HTML, Tailwind CSS and vanilla JS",
   "scripts": {
     "dev": "tailwindcss -i ./styles/tailwind.css -o ./assets/css/styles.css --watch=always",
-    "build": "node scripts/build-schemes.mjs && tailwindcss -i ./styles/tailwind.css -o ./assets/css/styles.css --minify && rm -rf dist && mkdir -p dist && cp -R *.html assets schemes dist/",
+    "build": "node scripts/build-schemes.mjs && tailwindcss -i ./styles/tailwind.css -o ./assets/css/styles.css --minify && rm -rf dist && mkdir -p dist && cp -R *.html .htaccess assets schemes dist/",
+    "bundle": "pnpm build && rm -f vertex-site.zip && cd dist && zip -rq ../vertex-site.zip . -x \"*.DS_Store\"",
     "start": "serve . -l 3100",
     "pages": "node scripts/build-schemes.mjs"
   },
