@@ -47,7 +47,7 @@ assets/js/layout.js      Renders the top bar, header + mega menus, mobile drawer
 assets/js/main.js        Interactions: menus, scroll reveal, counters, FAQ, scheme filters, form validation
 assets/img/              Logo (logo.webp, logo-light.webp for dark backgrounds, logo-mark.webp), favicons and photos
 assets/img/schemes/      Scheme flyers: <slug>-flyer.webp (thumbnail) and <slug>-flyer.jpg (full-size download)
-assets/docs/             Downloadable documents (company ISO 9001:2015 certificate)
+assets/docs/             Downloadable documents (company ISO 9001:2015 and DPIIT Startup India certificates)
 ```
 
 Header and footer are injected by `layout.js` into `<div id="site-header">` and `<div id="site-footer">`,
